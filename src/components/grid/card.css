@@ -1,0 +1,45 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: #152238;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+}
+.card-title {
+  color: white;
+}
+h2 {
+  margin-left: 10px;
+}
+p {
+  margin-left: 10px;
+}
+.container {
+  position: relative;
+}
+.title-author-div {
+  position: absolute;
+  bottom: 0;
+}
+.description {
+  margin-top: 10px;
+}
+.saveButton {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  background: #C6E4EE;
+  color: #152238;
+  cursor: pointer;
+  display: inline-block;
+}
+.saveButtonContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
