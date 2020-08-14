@@ -50,6 +50,7 @@ class UserHome extends Component{
       const token = localStorage.jwtToken;
       const decoded = jwt_decode(token);
       //get the email from token and setState
+      console.log(decoded);
       this.setState({user: decoded.email});
       this.loadBooks(decoded.email);
     } else {
@@ -63,8 +64,7 @@ class UserHome extends Component{
     return (
       <div>
         {/*<div><Redirect to={this.state.redirect}/></div>*/}
-        {/*<div>Hello {this.state.user}</div>*/}
-        <div>My List</div>
+        <h1 style={{paddingTop: "20px"}}>My List</h1>
         <div>
         <ShowUserBooks isLoading={this.state.isLoading} myBooks={this.state.myBooks} addBook={this.state.addBook}/>
         </div>

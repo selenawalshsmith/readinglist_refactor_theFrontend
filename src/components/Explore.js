@@ -108,21 +108,22 @@ class Explore extends Component{
   }
   render (){
     return (
-      <div id="wrapper">
-        <div id="content">
-          <div className="container">
+      /* <div id="wrapper"> */
+      /*  <div id="content"> */
+          <div className="container" style={{paddingTop: "30px"}}>
             <Search performSearch={this.performSearch} searchQuery={this.state.searchQuery}/>
-            <h1> Hello {this.state.user}</h1>
-            <h2>Search for books</h2>
-            <BookGrid cols={3}>
-            {
-              this.state.myBooks.map((bookItem, i) => (
-                <BookCard saveBook={this.saveBook} title={bookItem.title} id={bookItem.id} author={bookItem.author} img={bookItem.img} description={bookItem.description} key={i} addBook={this.state.addBook}/>
-              ))}
-            </BookGrid>
+            <h1>Search for books</h1>
+            <div>
+              <BookGrid cols={3}>
+              {
+                this.state.myBooks.map((bookItem, i) => (
+                  <BookCard saveBook={this.saveBook} title={bookItem.title} id={bookItem.id} author={bookItem.author} img={bookItem.img} description={bookItem.description} key={i} addBook={this.state.addBook}/>
+                ))}
+              </BookGrid>
+            </div>
           </div>
-        </div>
-      </div>
+        /*</div>*/
+      /*</div>*/
     )
   }
 }

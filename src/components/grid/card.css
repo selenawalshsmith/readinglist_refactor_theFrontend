@@ -1,7 +1,8 @@
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   background-color: #152238;
-  width: 100%;
+  /*width: 100%;*/
+  width: 350px;
   height: auto;
   border-radius: 5px;
   margin: 10px;
@@ -17,6 +18,10 @@ h2 {
 p {
   margin-left: 10px;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
 .container {
   position: relative;
 }
@@ -28,6 +33,7 @@ p {
   margin-top: 10px;
 }
 .saveButton {
+  font-family: "Poppins", sans-serif;
   margin-top: 10px;
   margin-bottom: 10px;
   width: 200px;

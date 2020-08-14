@@ -12,9 +12,9 @@ function ShowUserBooks(props){
             ))}
             </BookGrid>
   }
-  return <div>
-        <h2>Loading books...</h2>
-         <h4>Please refresh if nothing happens</h4>
+  return <div style={{margin: "auto"}}>
+        <h1>Loading books...</h1>
+         <h3>Please refresh if nothing happens</h3>
          </div>
 }
 export default ShowUserBooks;

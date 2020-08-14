@@ -41,11 +41,13 @@ class Nav extends Component{
     return (
       <div>
         <div className="navbar-wrapper">
-          <header style={headerStyle}>
-            <div className="NavItemContainer">
+      {/*<header style={headerStyle}>*/}
+            <div className="NavItemContainer" style={headerStyle}>
+              <header>
                 <Link to='/'>
-                  <h1>Reading List </h1>
+                  <h1 style={{paddingTop:"5px", fontSize: "60px" }}>Reading List </h1>
                 </Link>
+                </header>
               <ul>
                 <div style={{float: 'right'}}>
                   <Link to="/explore" style={{padding: '10px'}} >Explore</Link>
@@ -65,7 +67,7 @@ class Nav extends Component{
                 </div>
             </ul>
             </div>
-          </header>
+          {/*}</header>*/}
         </div>
       </div>
     )
@@ -75,7 +77,8 @@ const headerStyle ={
   background: "#C6E4EE",
   color: '#C6E4EE',
   textAlign: 'left',
-  padding: '10px',
+  paddingLeft: '30px',
+  padding: '20px',
   fontSize: '25px',
   width: '100%',
   float: 'right'
