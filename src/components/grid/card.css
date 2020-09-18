@@ -1,5 +1,6 @@
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+  box-shadow: 10px 5px 5px #152238;
   background-color: #152238;
   /*width: 100%;*/
   width: 350px;
@@ -36,7 +37,8 @@ img {
   font-family: "Poppins", sans-serif;
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 200px;
+  margin-left: 10px;
+  width: 100px;
   height: 30px;
   border-radius: 5px;
   background: #C6E4EE;

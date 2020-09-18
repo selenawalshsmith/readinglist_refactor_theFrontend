@@ -85,6 +85,7 @@ a {
   border: 1px solid transparent;
   text-decoration: none;
   user-select: none;
+  width: 25px !important;
 }
 
 .btn:hover {
