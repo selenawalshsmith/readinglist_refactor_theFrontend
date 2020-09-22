@@ -1,6 +1,7 @@
 import React, {Component}  from 'react';
 //import {registerUser} from "../../actions/registerUser";
 import axios from "axios";
+import books from "./books.png"
 import "../../App.css";
 
 class Register extends Component{
@@ -54,7 +55,8 @@ class Register extends Component{
 }*/
   render(){
     return (
-      <div>
+      <div className="wrapper">
+      <div><img src={books} className="loginImg"/></div>
       <div className="AuthContainer">
       <div>
         <h3>Register</h3>

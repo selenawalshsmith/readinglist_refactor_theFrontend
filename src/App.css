@@ -51,10 +51,22 @@ a {
 }
 .AuthContainer {
   margin:auto;
-  
+  position: relative;
+  top: -400px;
+  z-index: 3;
   background: #C6E4EE;
-  width: 75%;
+  width: 30%;
+  height: auto;
+  border: solid 3px #152238;
+  border-radius: 15%
 
+}
+.loginImg {
+  width: 100%;
+  height: auto;
+  top: -1300px;
+  border: solid 3px #152238;
+  border-radius: 15%
 }
 .column {
   float: left;

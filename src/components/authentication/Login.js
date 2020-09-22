@@ -70,18 +70,13 @@ class Login extends Component{
   }
   render(){
     return(
-      
+
       <div className="wrapper">
-        <div><img src={books} style={{width: "120%", height: "auto"}}/></div>
+        <div><img src={books} className="loginImg"/></div>
         <div className="AuthContainer content">
-          <div className="row">
-            <div className="column">
-              <div className="AuthContainerCol1">
-                <div>
                   <h2>Login</h2>
-                  </div>
                 <div>
-                  <h3>{this.state.error}</h3>
+                  <h4>{this.state.error}</h4>
                 </div>
                 <form onSubmit={this.onSubmit}>
                   <div style={{padding: '10px'}}>
@@ -105,15 +100,8 @@ class Login extends Component{
                     </div>
                 </div>
               </div>
-            </div>
-            <div className="column">
-              {/*<div className="AuthContainerCol2">*/}
-                <img src={books} style={{width: "120%", height: "auto"}}/>
-              {/*</div>*/}
-            </div>
-          </div>
         </div>
-      </div>
+
     )
   }
 };
