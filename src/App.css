@@ -50,10 +50,16 @@ a {
   padding-bottom: 5px;
 }
 .AuthContainer {
-  margin:50px;
-  padding: 10px;
+  margin:auto;
+  
   background: #C6E4EE;
-  width: 450px;
+  width: 75%;
+
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
 }
 .NavItem {
   color: #152238;

@@ -1,23 +1,21 @@
 import React, {Component} from 'react';
-import Nav from "./components/layout/Nav";
+import ShowNav from "./components/layout/showNav";
 import Explore from "./components/Explore";
 import UserHome from "./components/UserHome";
 import Register from "./components/authentication/Register";
 import Login from "./components/authentication/Login";
 
 //import setAuthToken from "./actions/setAuthToken";
-import{BrowserRouter as Router, Switch, Route, useLocation} from 'react-router-dom';
+import{BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 //import './App.css';
 
 class App extends Component {
   render(){
-    const location = useLocation();
-    console.log(location.pathname);
     return (
       <Router>
         <div className="App">
         <div>
-          <Nav/>
+          <ShowNav/>
         </div>
         <div className="container">
           <Switch>

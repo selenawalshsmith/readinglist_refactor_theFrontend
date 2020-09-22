@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import axios from "axios";
 //import setAuthToken from "../../actions/setAuthToken";
 import jwt_decode from "jwt-decode";
+import books from "./books.png"
 import "../../App.css";
 
 class Login extends Component{
@@ -17,15 +18,6 @@ class Login extends Component{
       error: ""
     };
   }
-  /*
-  componentDidMount(){
-    axios.get("/api/users/login").then((res) => {
-      if(res.data.length >0){
-        console.log(res);
-      }
-    })
-  }
-  */
   setAuthToken = token => {
   if (token) {
     // Apply authorization token to every request if logged in
@@ -36,11 +28,6 @@ class Login extends Component{
   }
 };
   setCurrentUser = (userEmail, history) => {
-    //this.state
-    //loginUser(this.state, decoded)
-    //history.push("/user/"+decoded.name);
-    //console.log(userEmail);
-
     history.push({
       //pathname: "/user/"+decoded.name,
       pathname: "/",
@@ -62,25 +49,11 @@ class Login extends Component{
       const decoded = jwt_decode(token);
        //Set current user
        console.log(decoded);
-       //console.log(userData);
        this.setCurrentUser(decoded.email, history);
-      //dispatch(setCurrentUser(decoded));
-      //history.push("/user");
     })
     .catch(err => {
-      //console.dir(err.response.data);
       console.log(err);
-      this.setState({error: "Wrong Email. Please try again."})
-      //this.state.errors = err.response.data;
-      //const i =1;
-      /*
-      Object.entries(this.state.errors).map((obj,i)=> {
-        console.log(obj[1]);
-        this.setState((state) => {
-          return{error: obj[1]}
-        });
-      })
-      */
+      this.setState({error: "Wrong Email. Please try again."});
     }
    );
   };
@@ -95,41 +68,51 @@ class Login extends Component{
     };
     this.loginUser(userData, this.props.history);
   }
-  /*if(localStorage.jwtToken){
-    return null;
-  }*/
   render(){
     return(
-      <div>
-      <div className="AuthContainer">
-        <div>
-          <h2>Login</h2>
-        </div>
-        <div>
-          <h3>{this.state.error}</h3>
-        </div>
-        <form onSubmit={this.onSubmit}>
-          <div style={{padding: '10px'}}>
-          <input
-            placeholder="email"
-            id="email"
-            onChange={this.onChange}
-          ></input>
-          </div>
-          <div style={{padding: '10px'}}>
-            <input placeholder="password" id="password" onChange={this.onChange}></input>
-          </div>
-          <div>
-            <button type="submit" className="btn" style={{padding: '10px'}}>Submit</button>
-          </div>
-          </form>
-          <div>
-            <h4>Need an account?</h4>
-            <div>
-            <Link to="./register"><button className="btn"><h4>Register</h4></button></Link>
+      
+      <div className="wrapper">
+        <div><img src={books} style={{width: "120%", height: "auto"}}/></div>
+        <div className="AuthContainer content">
+          <div className="row">
+            <div className="column">
+              <div className="AuthContainerCol1">
+                <div>
+                  <h2>Login</h2>
+                  </div>
+                <div>
+                  <h3>{this.state.error}</h3>
+                </div>
+                <form onSubmit={this.onSubmit}>
+                  <div style={{padding: '10px'}}>
+                    <input
+                      placeholder="email"
+                      id="email"
+                      onChange={this.onChange}
+                    ></input>
+                  </div>
+                  <div style={{padding: '10px'}}>
+                    <input placeholder="password" id="password" onChange={this.onChange}></input>
+                  </div>
+                  <div>
+                    <button type="submit" className="btn" style={{padding: '10px'}}>Submit</button>
+                  </div>
+                </form>
+                <div>
+                  <h4>Need an account?</h4>
+                    <div>
+                      <Link to="./register"><button className="btn"><h4>Register</h4></button></Link>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div className="column">
+              {/*<div className="AuthContainerCol2">*/}
+                <img src={books} style={{width: "120%", height: "auto"}}/>
+              {/*</div>*/}
             </div>
           </div>
-          </div>
+        </div>
       </div>
     )
   }

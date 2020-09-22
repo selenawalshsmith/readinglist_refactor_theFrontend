@@ -4,10 +4,7 @@ import LogoutUser from '../LogoutUser.js'
 import "../../App.css";
 import { useLocation } from 'react-router-dom'
 //import { Link } from 'react-router-dom'; //add links for pages
-/*
-<Link to={{pathname:"/explore", state:{user: this.state.user}}}><button>Explore</button></Link>
-<Link to={{pathname:"/explore", state:{user: this.state.user}}}><button>Explore</button></Link>
-*/
+
 class Nav extends Component{
   constructor() {
     super();
@@ -20,7 +17,6 @@ class Nav extends Component{
   hideItems(){
     if (localStorage.jwtToken) {
       console.log("token found");
-
       this.setState({showLogin: false});
       this.setState({showLogout: true});
     }
@@ -36,12 +32,10 @@ class Nav extends Component{
   }
   render(){
     const { showLogin  } = this.state;
-    //const { showRegister  } = this.state;
     const { showLogout  } = this.state;
     return (
       <div>
         <div className="navbar-wrapper">
-      {/*<header style={headerStyle}>*/}
             <div className="NavItemContainer" style={headerStyle}>
               <header>
                 <Link to='/'>
@@ -73,6 +67,7 @@ class Nav extends Component{
     )
   }
 }
+
 const headerStyle ={
   background: "#C6E4EE",
   color: '#C6E4EE',
