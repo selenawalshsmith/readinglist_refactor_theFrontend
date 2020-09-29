@@ -4,6 +4,7 @@ import Explore from "./components/Explore";
 import UserHome from "./components/UserHome";
 import Register from "./components/authentication/Register";
 import Login from "./components/authentication/Login";
+import Book from "./components/Book";
 
 //import setAuthToken from "./actions/setAuthToken";
 import{BrowserRouter as Router, Switch, Route} from 'react-router-dom';
@@ -23,7 +24,7 @@ class App extends Component {
           <Route path="/explore" exact component={Explore}/>
           <Route path="/register" exact component={Register}/>
           <Route path="/login" exact component={Login}/>
-          {/* <Route path="/book" component={Book}/> */}
+          <Route path="/book" component={Book}/>
           </Switch>
         </div>
         </div>

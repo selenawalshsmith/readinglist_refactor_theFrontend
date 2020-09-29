@@ -44,11 +44,12 @@ componentDidMount(){
     console.log(this.state.bookItem);
     const book = this.state.bookItem;
     return (
-      <div>
-      <h1>Book Page</h1>
+      <div className="content" style={{marginTop: "25px"}}>
       <h1>{book.title}</h1>
-      <h1>{book.publisher}</h1>
-      <h3>{book.description}</h3>
+      <h3>Publisher: {book.publisher}</h3>
+      <div style={{marginTop: "25px"}}>
+        {book.description}
+      </div>
       </div>
     )
   }
