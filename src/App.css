@@ -51,6 +51,7 @@ a {
 }
 .AuthContainer {
   margin:auto;
+  margin-top: 55px;
   position: relative;
   top: -400px;
   z-index: 3;
@@ -58,13 +59,33 @@ a {
   width: 30%;
   height: auto;
   border: solid 3px #152238;
-  border-radius: 15%
+  border-radius: 15%;
+  text-align: left;
+  padding: 15px;
 
 }
+.AuthInput {
+  border: 5px solid white;
+  border-radius: 10%;
+  -webkit-box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    -moz-box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    padding: 3px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+}
 .loginImg {
-  width: 100%;
+  width: 50%;
+  margin: auto;
   height: auto;
   top: -1300px;
+
   border: solid 3px #152238;
   border-radius: 15%
 }

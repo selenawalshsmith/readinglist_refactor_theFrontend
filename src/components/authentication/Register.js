@@ -55,10 +55,10 @@ class Register extends Component{
 }*/
   render(){
     return (
-      <div className="wrapper">
+      <div className="" style={{textAlign: "center"}}>
       <div><img src={books} className="loginImg"/></div>
       <div className="AuthContainer">
-      <div>
+      <div style={{marginBottom: "5px"}}>
         <h3>Register</h3>
       </div>
         <div>
@@ -67,6 +67,7 @@ class Register extends Component{
         <form onSubmit={this.onSubmit}>
           <div>
           <input
+            className="AuthInput"
             placeholder="email"
             id="email"
             onChange={this.onChange}
@@ -74,16 +75,17 @@ class Register extends Component{
           </div>
           <div>
           <input
+            className="AuthInput"
             placeholder="username"
             id="name"
             onChange={this.onChange}
           ></input>
           </div>
           <div>
-          <input placeholder="password" id="password" onChange={this.onChange}></input>
+          <input className="AuthInput" placeholder="password" id="password" onChange={this.onChange}></input>
           </div>
           <div>
-          <input placeholder="confirm password" id="password2" onChange={this.onChange}></input>
+          <input className="AuthInput" placeholder="confirm password" id="password2" onChange={this.onChange}></input>
           </div>
           <button type="submit" className="btn">Submit</button>
         </form>

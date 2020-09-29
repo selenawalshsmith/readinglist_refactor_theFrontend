@@ -71,9 +71,9 @@ class Login extends Component{
   render(){
     return(
 
-      <div className="wrapper">
+      <div className="" style={{textAlign: "center"}}>
         <div><img src={books} className="loginImg"/></div>
-        <div className="AuthContainer content">
+        <div className="AuthContainer">
                   <h2>Login</h2>
                 <div>
                   <h4>{this.state.error}</h4>
@@ -81,13 +81,19 @@ class Login extends Component{
                 <form onSubmit={this.onSubmit}>
                   <div style={{padding: '10px'}}>
                     <input
+                      className="AuthInput"
                       placeholder="email"
                       id="email"
                       onChange={this.onChange}
                     ></input>
                   </div>
                   <div style={{padding: '10px'}}>
-                    <input placeholder="password" id="password" onChange={this.onChange}></input>
+                    <input
+                      className="AuthInput"
+                      placeholder="password"
+                      id="password"
+                      onChange={this.onChange}
+                    ></input>
                   </div>
                   <div>
                     <button type="submit" className="btn" style={{padding: '10px'}}>Submit</button>
