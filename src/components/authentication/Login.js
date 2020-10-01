@@ -72,7 +72,7 @@ class Login extends Component{
     return(
 
       <div className="" style={{textAlign: "center"}}>
-        <div><img src={books} className="loginImg"/></div>
+
         <div className="AuthContainer">
                   <h2>Login</h2>
                 <div>
@@ -93,6 +93,7 @@ class Login extends Component{
                       placeholder="password"
                       id="password"
                       onChange={this.onChange}
+                      type="password"
                     ></input>
                   </div>
                   <div>

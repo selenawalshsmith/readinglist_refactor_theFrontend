@@ -53,7 +53,7 @@ a {
   margin:auto;
   margin-top: 55px;
   position: relative;
-  top: -400px;
+  /*top: -400px;*/
   z-index: 3;
   background: #C6E4EE;
   width: 30%;
@@ -65,7 +65,7 @@ a {
 
 }
 .AuthInput {
-  border: 5px solid white;
+  border: 5px solid #152238;
   border-radius: 10%;
   -webkit-box-shadow:
       inset 0 0 8px  rgba(0,0,0,0.1),
